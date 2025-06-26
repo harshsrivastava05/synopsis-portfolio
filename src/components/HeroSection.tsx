@@ -33,7 +33,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8 }}
           className="md:text-5xl text-3xl lg:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400"
         >
-          Synopsis Medical Technologies Inc.
+          Synapsis Medical Technologies Inc.
         </motion.h1>
         
         <motion.p 
