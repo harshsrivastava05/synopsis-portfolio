@@ -19,7 +19,9 @@ const Navigation = () => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
-      setIsOpen(false);
+      setTimeout(() => {
+        setIsOpen(false);
+      }, 500);
     }
   };
 
