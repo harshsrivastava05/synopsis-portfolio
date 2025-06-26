@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+const NAVBAR_HEIGHT = 64; // height in pixels
+
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -16,13 +18,20 @@ const Navigation = () => {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setTimeout(() => {
-        setIsOpen(false);
-      }, 500);
-    }
+    setIsOpen(false); // Close mobile menu first
+
+    setTimeout(() => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const offsetTop =
+          element.getBoundingClientRect().top + window.scrollY - NAVBAR_HEIGHT;
+
+        window.scrollTo({
+          top: offsetTop,
+          behavior: 'smooth',
+        });
+      }
+    }, 300); // Wait for mobile menu collapse animation
   };
 
   const navItems = [
@@ -42,7 +51,7 @@ const Navigation = () => {
           <div className="flex-shrink-0">
             <span className="text-white text-xl font-bold">Synopsis Medical</span>
           </div>
-          
+
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
