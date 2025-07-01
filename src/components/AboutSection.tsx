@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { FeaturesSectionWithHoverEffects } from '@/components/ui/feature-section-with-hover-effects';
+import React from "react";
+import { motion } from "framer-motion";
+import { FeaturesSectionWithHoverEffects } from "@/components/ui/feature-section-with-hover-effects";
 
 const AboutSection = () => {
   return (
@@ -17,10 +17,16 @@ const AboutSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-neutral-50 to-neutral-400 mb-6 drop-shadow-lg">
-            About Synopsis Medical
+            About Synapsis Medical Technologies Inc.
           </h2>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto text-white/90 drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)] transition-colors duration-700">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam massa nisl quis neque. Suspendisse potenti. Etiam euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam massa nisl quis neque.
+            Synapsis Medical Technologies Inc. builds AI-powered solutions
+            across healthcare, real estate, sustainability, and retail. Our work
+            includes mental health tools, body diagnostics, land approval
+            systems, and smart logistics. We use technologies like MediaPipe,
+            live tracking, and web crawlers to enhance user experience. Each
+            project is driven by a commitment to real-world impact and
+            innovation.
           </p>
         </motion.div>
         <FeaturesSectionWithHoverEffects />

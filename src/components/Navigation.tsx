@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+const NAVBAR_HEIGHT = 64;
+
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -16,11 +18,20 @@ const Navigation = () => {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsOpen(false);
-    }
+    setIsOpen(false); 
+
+    setTimeout(() => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const offsetTop =
+          element.getBoundingClientRect().top + window.scrollY - NAVBAR_HEIGHT;
+
+        window.scrollTo({
+          top: offsetTop,
+          behavior: 'smooth',
+        });
+      }
+    }, 300); 
   };
 
   const navItems = [
@@ -38,7 +49,11 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-            <span className="text-white text-xl font-bold">Synopsis Medical</span>
+            <img
+              src="/Synapsis_Logo.png"
+              alt="Synapsis Medical Logo"
+              className="h-10 w-auto object-contain"
+            />
           </div>
           
           {/* Desktop Navigation */}

@@ -1,4 +1,3 @@
-
 "use client";
 
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
@@ -48,10 +47,15 @@ export const AnimatedTestimonials = ({
   };
 
   return (
-    <div className={cn("max-w-sm md:max-w-4xl mx-auto px-4 md:px-8 lg:px-12 py-20", className)}>
+    <div
+      className={cn(
+        "z-10 max-w-sm md:max-w-4xl mx-auto px-4 md:px-8 lg:px-12 py-20",
+        className
+      )}
+    >
       <div className="relative grid grid-cols-1 md:grid-cols-2 gap-20">
         <div>
-          <div className="relative h-80 w-full">
+          <div className="relative h-80 w-full z-0">
             <AnimatePresence>
               {testimonials.map((testimonial, index) => (
                 <motion.div
@@ -85,6 +89,7 @@ export const AnimatedTestimonials = ({
                   className="absolute inset-0 origin-bottom"
                 >
                   <img
+                    // key={testimonial.name}
                     src={testimonial.src}
                     alt={testimonial.name}
                     draggable={false}

@@ -15,25 +15,25 @@ export function FeaturesSectionWithHoverEffects() {
     {
       title: "Our Mission",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam massa nisl quis neque.",
+        "To create intelligent, tech-driven solutions that solve complex real-world problems and improve everyday lives.",
       icon: <IconHeart />,
     },
     {
       title: "Our Vision",
       description:
-        "Suspendisse potenti. Etiam euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam massa nisl quis neque.",
+        "To be a global leader in responsible, transformative technology that bridges industries and improves well-being.",
       icon: <IconCloud />,
     },
     {
-      title: "Our Values", 
+      title: "Our Values",
       description:
-        "Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla porttitor accumsan tincidunt.",
+        "Innovation, impact, integrity, user-centric design, and continuous improvement.",
       icon: <IconAdjustmentsBolt />,
     },
     {
       title: "Our Goals",
       description:
-        "Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Proin eget tortor risus.",
+        "To lead innovation in multiple sectors by developing scalable and impactful AI-powered platforms.",
       icon: <IconTerminal2 />,
     },
   ];
@@ -63,7 +63,8 @@ const Feature = ({
         "flex flex-col border-r border-b py-10 relative group/feature dark:border-neutral-800 border-neutral-200",
         index === 0 && "border-l dark:border-neutral-800 border-neutral-200",
         index === 1 && "md:border-r-0",
-        index === 2 && "border-l dark:border-neutral-800 border-neutral-200 md:border-b-0",
+        index === 2 &&
+          "border-l dark:border-neutral-800 border-neutral-200 md:border-b-0",
         index === 3 && "md:border-r-0 md:border-b-0"
       )}
     >
